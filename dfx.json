@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "icp-workshop-backend": {
+      "candid": "src/icp-workshop-backend/icp-workshop-backend.did",
+      "package": "icp-workshop-backend",
+      "type": "rust"
+    },
+    "icp-workshop-frontend": {
+      "dependencies": [
+        "icp-workshop-backend"
+      ],
+      "source": [
+        "src/icp-workshop-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "icp-workshop-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
